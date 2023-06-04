@@ -91,5 +91,8 @@ console.log("\n\n" + "Función para borrar un contacto existente:");
 borrar(lista_de_contactos,1)
 //console.log(lista_de_contactos);
 
+console.log("\n\n" + "Función para borrar un contacto existente:");   
+borrar(lista_de_contactos,7)
+
 console.log("\n\n" + "Función para imprimir en consola los contactos:");
 imprimir(lista_de_contactos);
