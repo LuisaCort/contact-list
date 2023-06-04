@@ -24,7 +24,7 @@ function borrar (lista){
 
 // Función para borrar un cualquier contacto contacto existente por indice
 function borrar_index (lista,indice){
-    if (indice >= 0 || indice < lista.length) {
+    if (indice >= 0 && indice < lista.length) {
         lista.splice(indice,1),
         imprimir(lista)
     }
@@ -76,5 +76,7 @@ console.log("\n" + "Función para borrar un contacto existente indicando el indi
 borrar_index(listaContactos,8);
 console.log("\n" + "Función para borrar un contacto existente indicando el indice (4): ");
 borrar_index(listaContactos,4);
+console.log("\n" + "Función para borrar un contacto existente indicando el indice (12): ");
+borrar_index(listaContactos,12);
 console.log("\n" + "Función para borrar un contacto existente indicando el nombre (Fowler):");
 borrar_nombre(listaContactos,"Fowler");
