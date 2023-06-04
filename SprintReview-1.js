@@ -1,4 +1,4 @@
-/* Proyecto Integrador - 2:
+/* Proyecto Integrador - Sprint Review - 1:
     Lista de contactos */
 
 // Función crea un contacto
@@ -49,9 +49,64 @@ function imprimir (lista){
 }
 
 
-// Crear lista de contactos
-let lista_de_contactos = [];
+// Función actualizar un contacto
+function actualizar ( lista, id, key, valor ){
+    lista = lista.map(elemento => {
+        if(elemento.id === id){
+            elemento[key] = valor;
+            return elemento;
+        }else{
+            return elemento;
+        }
+    });
+    return(lista)
+}
 
+
+// Crear lista de contactos
+let lista_de_contactos = []
+let a = 0
+for(let i = 0; i < 4; i++){
+    lista_de_contactos.push(create_contact(i, "Nombre " + i, "Apellido " + i, + 1000000+ i * i, "Ciudad " + i, "Direccion " + i))
+    a = i
+}
+
+// Crear nuevos contactos 
+a++
+let dato0 = a;
+let dato1 = "Sheldon";
+let dato2 = "Cooper";
+let dato3 = 10000000 + a*a;
+let dato4 = "Ciudad " +a;
+let dato5 = "Direccion " + a;
+
+
+// Llamar funciones
+console.log("\n" + "Lista de contactos predefinida: ");
+imprimir(lista_de_contactos);
+
+console.log("\n" + "Función para añadir un nuevo contacto:");
+añadir(lista_de_contactos, dato0,dato1,dato2, dato3, dato4, dato5);
+
+console.log("\n\n" + "Función para borrar un contacto existente (id:1):");   
+borrar(lista_de_contactos,1)
+
+console.log("\n" + "Función para actualizar un contacto (id:2): ");
+lista_de_contactos = actualizar(lista_de_contactos,2,"nombres", "Luisa");
+imprimir(lista_de_contactos);
+
+console.log("\n" + "Función para actualizar un contacto(id:3): ");
+lista_de_contactos = actualizar(lista_de_contactos,3,"telefono", "3013030301");
+imprimir(lista_de_contactos);
+
+
+
+/* Proyecto Integrador - 2:
+    Lista de contactos */
+
+
+
+/*
 // Crear nuevos contactos 
 let dato0 = 00;
 let dato1 = "Sheldon";
@@ -77,22 +132,22 @@ let dat5 = "Av7";
 // Llamar funciones
 console.log("\n" + "Función para añadir un nuevo contacto:");
 añadir(lista_de_contactos, dato0,dato1,dato2, dato3, dato4, dato5);
-//console.log(lista_de_contactos);
+
 
 console.log("\n\n" + "Función para añadir un nuevo contacto:");
 añadir(lista_de_contactos, Dat0,Dat1,Dat2, Dat3, Dat4, Dat5);
-//console.log(lista_de_contactos);
+
 
 console.log("\n\n" + "Función para añadir un nuevo contacto:");
 añadir(lista_de_contactos, dat0,dat1,dat2, dat3, dat4, dat5);
-//console.log(lista_de_contactos);
+
 
 console.log("\n\n" + "Función para borrar un contacto existente:");   
 borrar(lista_de_contactos,1)
-//console.log(lista_de_contactos);
 
 console.log("\n\n" + "Función para borrar un contacto existente:");   
 borrar(lista_de_contactos,7)
 
 console.log("\n\n" + "Función para imprimir en consola los contactos:");
 imprimir(lista_de_contactos);
+*/
